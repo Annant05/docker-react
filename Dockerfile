@@ -10,4 +10,5 @@ RUN npm run build
 FROM nginx
 # the below line copies the files generated in 
 # /app/build of the above container to the nginx html directory
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
